@@ -19,14 +19,16 @@
   background-size: cover;
 }
 
-.hamburger-top, .hamburger-middle, .hamburger-bottom {
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
   position: absolute;
   width: 24px;
   height: 2px;
   top: 0;
   left: 0;
   transform: rotate(0);
-  transition: all 0.5s;
+  transition: all 0.3s ease;
 }
 
 .hamburger-middle {
@@ -37,16 +39,13 @@
   transform: translateY(14px);
 }
 
-.open {
-  transform: rotate(90deg);
+/* When open, apply transforms */
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
 }
 
 .open .hamburger-middle {
   display: none;
-}
-
-.open .hamburger-top {
-  transform: rotate(45deg) translateY(6px) translateX(6px);
 }
 
 .open .hamburger-bottom {
